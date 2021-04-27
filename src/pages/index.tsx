@@ -1,14 +1,9 @@
-import Head from 'next/head';
+import { useLang } from '@utilities/contexts/lang';
 
-export default function Home() {
-    return (
-        <div>
-            <Head>
-                <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <div className="bg-success-500">sdafdsafsd</div>
-            homepage
-        </div>
-    );
-}
+const Home = () => {
+    const { phrases } = useLang();
+
+    return <div>{phrases.home}</div>;
+};
+
+export default Home;
