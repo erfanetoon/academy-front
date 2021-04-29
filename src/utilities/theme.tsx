@@ -29,45 +29,46 @@ export let Colors: ColorsInterface = {
     black: '#000',
 };
 
-const jss = create({ plugins: [...jssPreset().plugins] });
-const theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: Colors.primary,
-            contrastText: '#fff',
-        },
-        secondary: {
-            main: Colors.secondary,
-            contrastText: '#fff',
-        },
-        error: {
-            main: Colors.error,
-            contrastText: '#fff',
-        },
-        warning: {
-            main: Colors.warning,
-            contrastText: '#fff',
-        },
-        info: {
-            main: Colors.info,
-            contrastText: '#fff',
-        },
-        success: {
-            main: Colors.success,
-            contrastText: '#fff',
-        },
-    },
-    shape: {
-        borderRadius: 16,
-    },
-    spacing: 4,
-});
-
 interface Children {
     children: ReactNode;
 }
 
-const App: FC<Children> = ({ children }) => {
+const Theme: FC<Children> = ({ children }) => {
+    const jss = create({ plugins: [...jssPreset().plugins] });
+
+    const theme = createMuiTheme({
+        palette: {
+            primary: {
+                main: Colors.primary,
+                contrastText: '#fff',
+            },
+            secondary: {
+                main: Colors.secondary,
+                contrastText: '#fff',
+            },
+            error: {
+                main: Colors.error,
+                contrastText: '#fff',
+            },
+            warning: {
+                main: Colors.warning,
+                contrastText: '#fff',
+            },
+            info: {
+                main: Colors.info,
+                contrastText: '#fff',
+            },
+            success: {
+                main: Colors.success,
+                contrastText: '#fff',
+            },
+        },
+        shape: {
+            borderRadius: 16,
+        },
+        spacing: 4,
+    });
+
     return (
         <ThemeProvider theme={theme}>
             <StylesProvider jss={jss}>{children}</StylesProvider>
@@ -75,4 +76,4 @@ const App: FC<Children> = ({ children }) => {
     );
 };
 
-export default App;
+export default Theme;

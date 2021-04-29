@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 import { getItem } from './helper/localStorage';
 
 const Api = axios.create({

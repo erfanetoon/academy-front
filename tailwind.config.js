@@ -1,26 +1,33 @@
-const colors = require('tailwindcss/colors');
-const customColors = require('./colors');
+const colors = require('./colors.js');
+const tailwindColors = require('tailwindcss/colors');
 
 module.exports = {
-    purge: [
-        './pages/**/*.{js,ts,jsx,tsx}',
-        './components/**/*.{js,ts,jsx,tsx}',
-    ],
-    darkMode: false, // or 'media' or 'class'
+    prefix: 'tw-',
+    important: true,
+    darkMode: false,
     theme: {
-        extends: {
-            colors: {
-                transparent: 'transparent',
-                current: 'currentColor',
-                black: colors.black,
-                white: colors.white,
-                gray: colors.trueGray,
-                indigo: colors.indigo,
-                red: colors.rose,
-                yellow: colors.amber,
-                primary: customColors.primary,
-                secondary: customColors.secondary,
-                tertiary: customColors.tertiary,
+        colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+            black: tailwindColors.black,
+            white: tailwindColors.white,
+            gray: tailwindColors.trueGray,
+            indigo: tailwindColors.primary,
+            red: tailwindColors.rose,
+            yellow: tailwindColors.amber,
+            primary: colors.primary,
+            secondary: colors.secondary,
+            tertiary: colors.tertiary,
+        },
+        extend: {
+            zIndex: {
+                1030: 1030,
+                1025: 1025,
+                1020: 1020,
+                1015: 1015,
+                1010: 1010,
+                1005: 1005,
+                1000: 1000,
             },
         },
     },
