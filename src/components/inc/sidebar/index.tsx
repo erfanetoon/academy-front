@@ -1,7 +1,7 @@
 const Sidebar = () => {
     return (
         <aside>
-            <div></div> Sidebar
+            <div></div>
         </aside>
     );
 };

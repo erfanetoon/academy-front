@@ -5,9 +5,17 @@ const RTL = () => (
             html {
                 direction: rtl;
                 text-align: right;
-                font-family: IRANSans, '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"',
-                    'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif',
-                    '"Apple Color Emoji"', '"Segoe UI Emoji"',
+                font-family: IRANSans, '-apple-system', 'BlinkMacSystemFont',
+                    '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial',
+                    'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"',
+                    '"Segoe UI Symbol"' !important;
+            }
+            *,
+            select,
+            option {
+                font-family: IRANSans, '-apple-system', 'BlinkMacSystemFont',
+                    '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial',
+                    'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"',
                     '"Segoe UI Symbol"' !important;
             }
         `}</style>

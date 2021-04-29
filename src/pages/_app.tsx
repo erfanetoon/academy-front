@@ -10,9 +10,15 @@ import '@styles/app.scss';
 const App = ({ Component, pageProps, phrases, locale, rtl }: AppProps) => {
     return (
         <>
-            <Theme>
+            <Theme rtl={rtl}>
                 {rtl && <RTL />}
-                <LangProvider phrases={phrases} locale={locale}>
+                <LangProvider
+                    phrases={{
+                        ...phrases,
+                        siteTitle: rtl ? 'آکادمی آنلاین' : 'Online Academy',
+                    }}
+                    locale={locale}
+                >
                     <ToastContainer />
                     <Component {...pageProps} />
                 </LangProvider>

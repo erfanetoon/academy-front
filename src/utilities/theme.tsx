@@ -31,9 +31,10 @@ export let Colors: ColorsInterface = {
 
 interface Children {
     children: ReactNode;
+    rtl: boolean;
 }
 
-const Theme: FC<Children> = ({ children }) => {
+const Theme: FC<Children> = ({ children, rtl }) => {
     const jss = create({ plugins: [...jssPreset().plugins] });
 
     const theme = createMuiTheme({
