@@ -1,12 +1,11 @@
 .header {
     &__courses:hover {
-        .header__coursesMenu {
+        .header__coursesCategory {
             display: block !important;
-            color: $primary;
         }
     }
 
-    &__coursesMenu {
+    &__coursesCategory {
         width: 220px;
     }
 }

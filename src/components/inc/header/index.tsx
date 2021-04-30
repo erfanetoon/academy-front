@@ -6,7 +6,8 @@ import Search from './search';
 import { Badge, Button, IconButton } from '@material-ui/core';
 import Link from 'next/link';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-import { FaTh } from 'react-icons/fa';
+import Categories from './categories';
+import Routes from '@routes/index';
 
 const Header = () => {
     const mobileMenuStatus = useMediaQuery('(max-width:767px)');
@@ -18,8 +19,8 @@ const Header = () => {
                 <Sidebar />
                 {mobileMenuStatus && <MobileMenu />}
                 <nav className="tw-flex tw-items-center">
-                    <Link href="/">
-                        <a>
+                    <Link href={Routes.home}>
+                        <a className="tw-w-full md:tw-w-auto">
                             <img
                                 height={35}
                                 className="tw-h-9 tw-max-w-max"
@@ -29,24 +30,11 @@ const Header = () => {
                         </a>
                     </Link>
                     <div className="tw-mx-4 md:tw-inline-flex tw-hidden">
-                        <div className="header__courses tw-relative">
-                            <div className="tw-flex tw-items-center tw-min-w-max">
-                                <FaTh className="tw-text-sm tw-mx-1 tw-text-gray-400" />
-                                <span className="tw-text-gray-800 tw-text-sm">
-                                    {phrases.courses}
-                                </span>
-                            </div>
-                            <div className="tw-absolute header__coursesMenu tw-hidden tw-transition-all tw-duration-300 tw-pt-4">
-                                <div className="tw-bg-white tw-shadow-lg tw-p-2 tw-border">
-                                    menu
-                                </div>
-                            </div>
-                        </div>
+                        <Categories />
                     </div>
                     <div className="tw-mx-6 tw-w-full md:tw-inline-flex tw-hidden">
                         <Search />
                     </div>
-
                     <div className="tw-mx-2">
                         <IconButton
                             color="default"
@@ -57,23 +45,31 @@ const Header = () => {
                             </Badge>
                         </IconButton>
                     </div>
-                    <div className="tw-mx-2 md:tw-inline-flex tw-hidden">
-                        <Button
-                            variant="outlined"
-                            color="primary"
-                            className="tw-w-max tw-py-3"
-                        >
-                            {phrases.login}
-                        </Button>
+                    <div className="tw-mx-2 sm:tw-inline-flex tw-hidden">
+                        <Link href={Routes.login}>
+                            <a>
+                                <Button
+                                    variant="outlined"
+                                    color="primary"
+                                    className="tw-w-max tw-py-3"
+                                >
+                                    {phrases.login}
+                                </Button>
+                            </a>
+                        </Link>
                     </div>
-                    <div className="md:tw-inline-flex tw-hidden">
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            className="tw-w-max tw-py-3 tw-shadow-none"
-                        >
-                            {phrases.sign_up}
-                        </Button>
+                    <div className="sm:tw-inline-flex tw-hidden">
+                        <Link href={Routes.sign_up}>
+                            <a>
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    className="tw-w-max tw-py-3 tw-shadow-none"
+                                >
+                                    {phrases.sign_up}
+                                </Button>
+                            </a>
+                        </Link>
                     </div>
                 </nav>
             </section>
