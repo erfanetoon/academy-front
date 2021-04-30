@@ -5,6 +5,10 @@
 // Tailwind Apply 
 @import "./applies.scss";
 
+// Components
+@import "./components/inc/footer.scss";
+@import "./components/inc/header.scss";
+
 html, body {
     margin: 0;
     padding: 0;
@@ -35,4 +39,8 @@ html, body {
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"' !important; 
+}
+
+input {
+    outline: none !important;
 }

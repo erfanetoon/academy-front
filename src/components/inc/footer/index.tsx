@@ -2,11 +2,9 @@ import Link from 'next/link';
 import Routes from '@routes/index';
 import { useLang } from '@utilities/contexts/lang';
 import { NativeSelect } from '@material-ui/core';
-import FooterStyles from './styles';
 import { useRouter } from 'next/router';
 
 const Footer = () => {
-    const classes = FooterStyles();
     const router = useRouter();
     const { phrases, locale } = useLang();
 
@@ -19,7 +17,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="tw-border-b-4 tw-border-primary tw-bg-white tw-py-4">
+        <footer className="tw-border-b-4 tw-border-primary tw-bg-white tw-py-4 footer">
             <section className="container">
                 <div className="md:tw-flex tw-items-center tw-text-center md:tw-text-start">
                     <Link href={Routes.home}>
@@ -66,7 +64,7 @@ const Footer = () => {
                         name="language"
                         onChange={handleLangChange}
                         defaultValue={locale}
-                        className={classes.nativeSelect}
+                        className="footer__nativeSelect"
                         inputProps={{ 'aria-label': 'language' }}
                     >
                         <option value="en">English</option>

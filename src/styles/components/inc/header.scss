@@ -1,0 +1,12 @@
+.header {
+    &__courses:hover {
+        .header__coursesMenu {
+            display: block !important;
+            color: $primary;
+        }
+    }
+
+    &__coursesMenu {
+        width: 220px;
+    }
+}

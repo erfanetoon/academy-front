@@ -65,7 +65,7 @@ const Theme: FC<Children> = ({ children, rtl }) => {
             },
         },
         shape: {
-            borderRadius: 16,
+            borderRadius: 0,
         },
         spacing: 4,
     });
