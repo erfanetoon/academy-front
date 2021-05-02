@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Online Academy LMS System
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ Run development server:
 npm run dev
 ```
 
-Build project:
+Run production project:
 
 ```bash
 npm run build
@@ -17,6 +17,10 @@ npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Requirements
+
+You must start `Backend Server` [http://localhost:3000](http://localhost:3000)
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
