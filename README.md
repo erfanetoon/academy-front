@@ -20,22 +20,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Requirements
 
-You must start [https://github.com/Erfanhp77/academy-backends](https://github.com/Erfanhp77/academy-backend) and add database `academy.sql`
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+You must start [Backend Server](https://github.com/Erfanhp77/academy-backend) and add database `academy.sql`
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+We use `Nextjs` for our main SSR library and we use `Typescript` for all part of this app
+Use `Tailwind` and `Material UI` for design and structure
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+It's `Multi Languages` app that phrases and all texts handle from server(SSR) and handle `RTL` direction
 
 ## Deploy on Vercel
 
