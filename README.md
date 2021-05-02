@@ -20,11 +20,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Requirements
 
-You must start [Backend Server](https://github.com/Erfanhp77/academy-backend) and add database `academy.sql`
+You must start and run [Backend Server](https://github.com/Erfanhp77/academy-backend)
 
 ## Learn More
 
-We use `Nextjs` for our main SSR library and we use `Typescript` for all part of this app
+We use `Nextjs` with `Typescript` for all part of this app
 
 Use `Tailwind` and `Material UI` for design and structure
 

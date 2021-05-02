@@ -1,7 +1,7 @@
 import { useLang } from '@utilities/contexts/lang';
 import { useEffect, useState } from 'react';
 import { FaTh } from 'react-icons/fa';
-import { getApi } from './../../../utilities/request';
+import { getApi } from '@utilities/request';
 import { categoriesPath } from '@routes/api';
 import Routes from '@routes/index';
 import Link from 'next/link';
