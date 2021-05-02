@@ -13,7 +13,7 @@ const Intro = () => {
             <div className="homepage__intro">
                 <div className="container">
                     <div className="tw-grid md:tw-grid-cols-2">
-                        <div className="tw-w-5/6">
+                        <div className="md:tw-w-5/6">
                             <h2 className="tw-text-4xl tw-font-bold tw-mb-6">
                                 {phrases.learn_on_your_schedule}
                             </h2>
@@ -49,7 +49,7 @@ const Intro = () => {
                                     {phrases.expert_instruction}
                                 </h4>
                                 <p className="tw-text-gray-200">
-                                    {phrases.explore_a_variety_of_fresh_topics}
+                                    {phrases.find_the_right_course_for_you}
                                 </p>
                             </div>
                         </div>
@@ -57,10 +57,10 @@ const Intro = () => {
                             <FaClock className="tw-text-5xl" />
                             <div className="tw-mx-2">
                                 <h4 className="tw-text-lg tw-font-bold">
-                                    {phrases.online_courses}
+                                    {phrases.lifetime_access}
                                 </h4>
                                 <p className="tw-text-gray-200">
-                                    {phrases.explore_a_variety_of_fresh_topics}
+                                    {phrases.learn_on_your_schedule}
                                 </p>
                             </div>
                         </div>
