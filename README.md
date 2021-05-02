@@ -20,7 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Requirements
 
-You must start [https://github.com/Erfanhp77/academy-backend](Backend Server) and add database `academy.sql`
+You must start [https://github.com/Erfanhp77/academy-backends](https://github.com/Erfanhp77/academy-backend) and add database `academy.sql`
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
