@@ -2,6 +2,7 @@ import MobileMenu from '../mobileMenu';
 import Sidebar from '../sidebar';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useLang } from '@utilities/contexts/lang';
+import { useSettings } from '@utilities/contexts/settings';
 import Search from './search';
 import { Badge, Button, IconButton } from '@material-ui/core';
 import Link from 'next/link';
@@ -12,6 +13,7 @@ import Routes from '@routes/index';
 const Header = () => {
     const mobileMenuStatus = useMediaQuery('(max-width:767px)');
     const { phrases } = useLang();
+    const { images } = useSettings();
 
     return (
         <header className="tw-bg-white tw-shadow tw-py-4 header">
@@ -24,7 +26,7 @@ const Header = () => {
                             <img
                                 height={35}
                                 className="tw-h-9 tw-max-w-max"
-                                src="/images/logo-dark.png"
+                                src={images.dark_logo}
                                 alt={phrases.siteTitle}
                             />
                         </a>

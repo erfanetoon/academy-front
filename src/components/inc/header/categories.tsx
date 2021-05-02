@@ -34,7 +34,7 @@ const Categories = () => {
                     <ul className="tw-text-gray-600">
                         {!!data.length &&
                             data.map((item) => (
-                                <li>
+                                <li key={item.id}>
                                     <Link
                                         href={{
                                             pathname: Routes.courses,

@@ -3,10 +3,12 @@ import Routes from '@routes/index';
 import { useLang } from '@utilities/contexts/lang';
 import { NativeSelect } from '@material-ui/core';
 import { useRouter } from 'next/router';
+import { useSettings } from '@utilities/contexts/settings';
 
 const Footer = () => {
     const router = useRouter();
     const { phrases, locale } = useLang();
+    const { images } = useSettings();
 
     const handleLangChange = ({ target }) => {
         const value = target.value;
@@ -25,7 +27,7 @@ const Footer = () => {
                             <img
                                 className="tw-mx-auto md:tw-mx-0"
                                 width={110}
-                                src="/images/logo-dark.png"
+                                src={images.dark_logo}
                                 alt={phrases.siteTitle}
                             />
                         </a>
