@@ -11,13 +11,13 @@ const Intro = () => {
     return (
         <>
             <div className="homepage__intro">
-                <div className="container">
-                    <div className="tw-grid md:tw-grid-cols-2">
-                        <div className="md:tw-w-5/6">
-                            <h2 className="tw-text-4xl tw-font-bold tw-mb-6">
+                <div className="app-container">
+                    <div className="grid md:grid-cols-2">
+                        <div className="md:w-5/6">
+                            <h2 className="text-4xl font-bold mb-6">
                                 {phrases.learn_on_your_schedule}
                             </h2>
-                            <p className="tw-mb-6">
+                            <p className="mb-6">
                                 {locale === 'fa' &&
                                     'مطالعه هر مطلب، در هر زمان، جست وجو میان هزاران آموزش با کمترین هزینه'}
                                 {locale === 'en' &&
@@ -28,38 +28,38 @@ const Intro = () => {
                     </div>
                 </div>
             </div>
-            <div className="tw-bg-gradient-to-r tw-to-primary tw-from-secondary tw-py-4 tw-text-white">
-                <div className="container">
-                    <div className="tw-grid md:tw-grid-cols-3">
-                        <div className="tw-flex tw-items-center tw-mb-8 md:tw-mb-0">
-                            <FaBullseye className="tw-text-5xl" />
-                            <div className="tw-mx-2">
-                                <h4 className="tw-text-lg tw-font-bold">
+            <div className="bg-gradient-to-r to-primary from-secondary py-4 text-white">
+                <div className="app-container">
+                    <div className="grid md:grid-cols-3">
+                        <div className="flex items-center mb-8 md:mb-0">
+                            <FaBullseye className="text-5xl" />
+                            <div className="mx-2">
+                                <h4 className="text-lg font-bold">
                                     {phrases.online_courses}
                                 </h4>
-                                <p className="tw-text-gray-200">
+                                <p className="text-gray-200">
                                     {phrases.explore_a_variety_of_fresh_topics}
                                 </p>
                             </div>
                         </div>
-                        <div className="tw-flex tw-items-center tw-mb-8 md:tw-mb-0">
-                            <FaCheck className="tw-text-5xl" />
-                            <div className="tw-mx-2">
-                                <h4 className="tw-text-lg tw-font-bold">
+                        <div className="flex items-center mb-8 md:mb-0">
+                            <FaCheck className="text-5xl" />
+                            <div className="mx-2">
+                                <h4 className="text-lg font-bold">
                                     {phrases.expert_instruction}
                                 </h4>
-                                <p className="tw-text-gray-200">
+                                <p className="text-gray-200">
                                     {phrases.find_the_right_course_for_you}
                                 </p>
                             </div>
                         </div>
-                        <div className="tw-flex tw-items-center">
-                            <FaClock className="tw-text-5xl" />
-                            <div className="tw-mx-2">
-                                <h4 className="tw-text-lg tw-font-bold">
+                        <div className="flex items-center">
+                            <FaClock className="text-5xl" />
+                            <div className="mx-2">
+                                <h4 className="text-lg font-bold">
                                     {phrases.lifetime_access}
                                 </h4>
-                                <p className="tw-text-gray-200">
+                                <p className="text-gray-200">
                                     {phrases.learn_on_your_schedule}
                                 </p>
                             </div>

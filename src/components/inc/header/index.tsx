@@ -1,73 +1,64 @@
 import MobileMenu from '../mobileMenu';
 import Sidebar from '../sidebar';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+// import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useLang } from '@utilities/contexts/lang';
 import { useSettings } from '@utilities/contexts/settings';
 import Search from './search';
-import { Badge, Button, IconButton } from '@material-ui/core';
+// import { Badge, Button, IconButton } from '@material-ui/core';
 import Link from 'next/link';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import Categories from './categories';
 import Routes from '@routes/index';
+import Button from '@components/ui/button';
 
 const Header = () => {
-    const mobileMenuStatus = useMediaQuery('(max-width:767px)');
+    // const mobileMenuStatus = useMediaQuery('(max-width:767px)');
     const { phrases } = useLang();
     const { images } = useSettings();
 
     return (
-        <header className="tw-bg-white tw-shadow tw-py-4 header">
-            <section className="container">
+        <header className="bg-white shadow py-4 header">
+            <section className="app-container">
                 <Sidebar />
-                {mobileMenuStatus && <MobileMenu />}
-                <nav className="tw-flex tw-items-center">
+                {/* {mobileMenuStatus && <MobileMenu />} */}
+                <nav className="flex items-center">
                     <Link href={Routes.home}>
-                        <a className="tw-w-full md:tw-w-auto">
+                        <a className="w-full md:w-auto">
                             <img
                                 height={35}
-                                className="tw-h-9 tw-max-w-max"
+                                className="h-9 max-w-max"
                                 src={images.dark_logo}
                                 alt={phrases.siteTitle}
                             />
                         </a>
                     </Link>
-                    <div className="tw-mx-4 md:tw-inline-flex tw-hidden">
+                    <div className="mx-4 md:inline-flex hidden">
                         <Categories />
                     </div>
-                    <div className="tw-mx-6 tw-w-full md:tw-inline-flex tw-hidden">
+                    <div className="mx-6 w-full md:inline-flex hidden">
                         <Search />
                     </div>
-                    <div className="tw-mx-2">
-                        <IconButton
+                    <div className="mx-2">
+                        {/* <IconButton
                             color="default"
                             aria-label="add to shopping cart"
                         >
                             <Badge badgeContent={4} color="primary">
                                 <AiOutlineShoppingCart />
                             </Badge>
-                        </IconButton>
+                        </IconButton> */}
                     </div>
-                    <div className="tw-mx-2 sm:tw-inline-flex tw-hidden">
+                    <div className="mx-2 sm:inline-flex hidden">
                         <Link href={Routes.login}>
                             <a>
-                                <Button
-                                    variant="outlined"
-                                    color="primary"
-                                    className="tw-w-max tw-py-3"
-                                >
-                                    {phrases.login}
-                                </Button>
+                                <Button color="primary">{phrases.login}</Button>
                             </a>
                         </Link>
                     </div>
-                    <div className="sm:tw-inline-flex tw-hidden">
+                    <div className="sm:inline-flex hidden">
                         <Link href={Routes.sign_up}>
                             <a>
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    className="tw-w-max tw-py-3 tw-shadow-none"
-                                >
+                                <Button color="primary">
                                     {phrases.sign_up}
                                 </Button>
                             </a>

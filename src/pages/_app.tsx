@@ -2,11 +2,10 @@ import { ToastContainer } from 'react-toastify';
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import { getApi } from '@utilities/request';
 import { LangProvider } from '@utilities/contexts/lang';
-import Theme from '@utilities/theme';
 import { appLogoPath, languagesPath, settingsPath } from '@routes/api';
+import { SettingsProvider } from '@utilities/contexts/settings';
 import RTL from '@layouts/rtl';
 import '@styles/app.scss';
-import { SettingsProvider } from '@utilities/contexts/settings';
 
 const App = ({
     Component,
@@ -19,21 +18,19 @@ const App = ({
 }: AppProps) => {
     return (
         <>
-            <Theme rtl={rtl}>
-                <SettingsProvider settings={settings} images={images}>
-                    {rtl && <RTL />}
-                    <LangProvider
-                        phrases={{
-                            ...phrases,
-                            siteTitle: rtl ? 'آکادمی آنلاین' : 'Online Academy',
-                        }}
-                        locale={locale}
-                    >
-                        <ToastContainer />
-                        <Component {...pageProps} />
-                    </LangProvider>
-                </SettingsProvider>
-            </Theme>
+            <SettingsProvider settings={settings} images={images}>
+                {rtl && <RTL />}
+                <LangProvider
+                    phrases={{
+                        ...phrases,
+                        siteTitle: rtl ? 'آکادمی آنلاین' : 'Online Academy',
+                    }}
+                    locale={locale}
+                >
+                    <ToastContainer />
+                    <Component {...pageProps} />
+                </LangProvider>
+            </SettingsProvider>
         </>
     );
 };

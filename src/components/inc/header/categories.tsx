@@ -24,14 +24,14 @@ const Categories = () => {
     }, []);
 
     return (
-        <div className="header__courses tw-relative">
-            <div className="tw-flex tw-items-center tw-min-w-max">
-                <FaTh className="tw-text-sm tw-mx-1 tw-text-gray-400" />
-                <span className="tw-text-gray-800">{phrases.courses}</span>
+        <div className="header__courses relative">
+            <div className="flex items-center min-w-max">
+                <FaTh className="text-sm mx-1 text-gray-400" />
+                <span className="text-gray-800">{phrases.courses}</span>
             </div>
-            <div className="tw-absolute header__coursesCategory tw-hidden tw-transition-all tw-duration-300 tw-pt-4">
-                <div className="tw-bg-white tw-shadow-lg tw-border tw-rounded">
-                    <ul className="tw-text-gray-600">
+            <div className="absolute header__coursesCategory hidden transition-all duration-300 pt-4">
+                <div className="bg-white shadow-lg border rounded">
+                    <ul className="text-gray-600">
                         {!!data.length &&
                             data.map((item) => (
                                 <li key={item.id}>
@@ -41,9 +41,9 @@ const Categories = () => {
                                             query: { category: item.slug },
                                         }}
                                     >
-                                        <a className="tw-flex tw-items-center tw-px-2 tw-py-3 hover:tw-bg-gray-100 tw-transition-all tw-duration-300">
-                                            <GiGraduateCap className="tw-text-2xl" />
-                                            <span className="tw-mx-2 tw-text-sm">
+                                        <a className="flex items-center px-2 py-3 hover:bg-gray-100 transition-all duration-300">
+                                            <GiGraduateCap className="text-2xl" />
+                                            <span className="mx-2 text-sm">
                                                 {item.name}
                                             </span>
                                         </a>
@@ -52,9 +52,9 @@ const Categories = () => {
                             ))}
                         <li>
                             <Link href={Routes.courses}>
-                                <a className="tw-flex tw-items-center tw-px-2 tw-py-3 hover:tw-bg-gray-100 tw-transition-all tw-duration-300">
-                                    <HiMenu className="tw-text-2xl" />
-                                    <span className="tw-mx-2 tw-text-sm">
+                                <a className="flex items-center px-2 py-3 hover:bg-gray-100 transition-all duration-300">
+                                    <HiMenu className="text-2xl" />
+                                    <span className="mx-2 text-sm">
                                         {phrases.all_courses}
                                     </span>
                                 </a>

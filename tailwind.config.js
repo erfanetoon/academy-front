@@ -2,7 +2,6 @@ const colors = require('./colors.js');
 const tailwindColors = require('tailwindcss/colors');
 
 module.exports = {
-    prefix: 'tw-',
     important: true,
     darkMode: false,
     theme: {
@@ -12,9 +11,11 @@ module.exports = {
             black: tailwindColors.black,
             white: tailwindColors.white,
             gray: tailwindColors.trueGray,
-            indigo: tailwindColors.primary,
+            indigo: tailwindColors.indigo,
             red: tailwindColors.rose,
             yellow: tailwindColors.amber,
+            pink: tailwindColors.pink,
+            purple: tailwindColors.violet,
             primary: colors.primary,
             secondary: colors.secondary,
             tertiary: colors.tertiary,

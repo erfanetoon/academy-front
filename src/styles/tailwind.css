@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Applies */
+@layer components {
+    @import url('./applies/basic.css');
+    @import url('./applies/button.css');
+}

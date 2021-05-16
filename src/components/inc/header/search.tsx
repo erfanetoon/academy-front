@@ -1,25 +1,25 @@
 import { FaSearch } from 'react-icons/fa';
 import { useLang } from '@utilities/contexts/lang';
-import { Button } from '@material-ui/core';
+// import { Button } from '@material-ui/core';
 
 const Search = () => {
     const { phrases } = useLang();
 
     return (
-        <div className="tw-flex tw-items-stretch tw-w-full">
+        <div className="flex items-stretch w-full">
             <input
                 type="text"
-                className="tw-w-full tw-bg-gray-100 focus:tw-bg-white tw-border tw-border-gray-100 tw-px-4 tw-py-3 tw-transition-all tw-duration-300 tw-text-gray-700 tw-text-sm"
+                className="w-full bg-gray-100 focus:bg-white border border-gray-100 px-4 py-3 transition-all duration-300 text-gray-700 text-sm"
                 placeholder={phrases.search_for_courses}
             />
-            <Button
+            {/* <Button
                 color="primary"
                 size="small"
-                className="tw-shadow-none tw-px-4 tw-min-w-0"
+                className="shadow-none px-4 min-w-0"
                 variant="contained"
             >
-                <FaSearch className="tw-text-lg" />
-            </Button>
+                <FaSearch className="text-lg" />
+            </Button> */}
         </div>
     );
 };
